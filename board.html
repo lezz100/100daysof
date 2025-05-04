@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janet Backend Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 20px;
+      overflow-x: hidden;
+      color: #fff;
+      background: linear-gradient(120deg, #fbc6f2, #deaaff, #f08080);
+      background-size: 300% 300%;
+      animation: gradientAnimation 10s ease infinite;
+    }
+    h1 {
+      font-family: 'Sacramento', cursive;
+      font-size: 48px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #ff69b4;
+    }
+    .node {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      padding: 15px;
+      margin: 10px auto;
+      width: 250px;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+      border: 2px dashed #fff;
+      box-shadow: 0 0 10px #fff8;
+    }
+    .node:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .node.active {
+      background: rgba(255, 255, 255, 0.4);
+      border-color: #ff69b4;
+    }
+    .content {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .content a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .visual-map {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding: 40px;
+    }
+    .connection {
+      width: 3px;
+      height: 30px;
+      background: #fff;
+    }
+
+    /* Animation for the gradient */
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lesley Backend Development Journey</h1>
+
+  <div class="visual-map">
+    <div class="node" onclick="toggleContent(this)">
+      🐍 Python
+      <div class="content">
+        Learn Python fundamentals: <a href="https://docs.python.org/3/tutorial/" target="_blank">Official Docs</a><br>
+        Practice: <a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Codecademy</a><br>
+        Master OOP, data structures
+      </div>
+    </div>
+    <div class="connection"></div>
+    <div class="node" onclick="toggleContent(this)">
+      🧰 Frameworks (Django, Flask)
+      <div class="content">
+        Django Intro: <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django" target="_blank">MDN Django</a><br>
+        Flask Course: <a href="https://flask.palletsprojects.com/en/2.2.x/tutorial/" target="_blank">Flask Official Tutorial</a>
+      </div>
+    </div>
+    <div class="connection"></div>
+    <div class="node" onclick="toggleContent(this)">
+      🗃️ Databases (SQL, NoSQL)
+      <div class="content">
+        SQL Tutorial: <a href="https://sqlbolt.com/" target="_blank">SQLBolt</a><br>
+        MongoDB Basics: <a href="https://www.mongodb.com/basics" target="_blank">MongoDB</a>
+      </div>
+    </div>
+    <div class="connection"></div>
+    <div class="node" onclick="toggleContent(this)">
+      🔐 Authentication & APIs
+      <div class="content">
+        REST API Guide: <a href="https://restfulapi.net/" target="_blank">REST API</a><br>
+        JWT Auth: <a href="https://jwt.io/introduction" target="_blank">JWT.io</a>
+      </div>
+    </div>
+    <div class="connection"></div>
+    <div class="node" onclick="toggleContent(this)">
+      ⚙️ Deployment & DevOps
+      <div class="content">
+        Deploy with Heroku: <a href="https://devcenter.heroku.com/categories/reference" target="_blank">Heroku Docs</a><br>
+        Learn CI/CD: <a href="https://www.atlassian.com/continuous-delivery" target="_blank">Atlassian</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(element) {
+      document.querySelectorAll('.node').forEach(node => {
+        if (node !== element) {
+          node.classList.remove('active');
+          node.querySelector('.content').style.display = 'none';
+        }
+      });
+      element.classList.toggle('active');
+      const content = element.querySelector('.content');
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
