@@ -7,9 +7,9 @@ public class ZombieKiller {
 
         System.out.println("Choose your weapon:");
         System.out.println("0. " + loader[0]);
+        System.out.println("2. " + zombies[3]);
         System.out.println("1. " + loader[2]);
         System.out.println("1. " + loader[1]);
-        System.out.println("2. " + zombies[3]);
         
     }
     
