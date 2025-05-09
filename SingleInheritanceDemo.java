@@ -24,3 +24,5 @@ public class SingleInheritanceDemo {
         mySon.house();
     }
 }
+
+//finally donw with exam. learning continues
