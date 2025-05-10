@@ -25,4 +25,4 @@ public class SingleInheritanceDemo {
     }
 }
 
-//finally donw with exam. learning continues
+//finally done with exam. learning continues
