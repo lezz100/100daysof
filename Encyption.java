@@ -16,3 +16,17 @@ public class Encyption {
         System.out.println(text);
     }
 }
+
+
+/* int key = 6;
+
+String text = "Hey let the grind continue";
+
+System.out.print(text);
+
+char[] chars = text.toCharArray();
+
+for (char c : chars) {
+    c += key;
+    System.out.print(c);
+} */
