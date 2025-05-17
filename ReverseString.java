@@ -1,8 +1,8 @@
 public class ReverseString {
     public static void main(String[] args){
-        System.out.println("Dog");
+        System.out.println("cat");
 
-       String r = reverse("Dog");
+       String r = reverse("cat");
        System.out.println(r);   
     }
 
