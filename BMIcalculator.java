@@ -5,7 +5,7 @@ public class BMIcalculator{
         Scanner scanner = new Scanner(System.in);
 
         // Input: height and weight
-        System.out.print("Enter your height in meters: ");
+        System.out.print("Enter your height in feet: ");
         double height = scanner.nextDouble();
 
         System.out.print("Enter your weight in kilograms: ");
