@@ -32,7 +32,7 @@ public class BMIcalculator{
         double minNormalWeight = 20 * height * height;
         double maxNormalWeight = 40 * height * height;
 
-        System.out.printf("\nThe normal weight range for your height (%.2f m) is:\n", height);
+        System.out.printf("\nThe normal average weight range for your height (%.2f m) is:\n", height);
         System.out.printf("Minimum normal weight: %.2f kg\n", minNormalWeight);
         System.out.printf("Maximum normal weight: %.2f kg\n", maxNormalWeight);
 
